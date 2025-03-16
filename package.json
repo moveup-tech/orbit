@@ -1,0 +1,29 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "Template de aplicação front/back-end",
+  "author": "Daniel Murilo Vaz <daniellmvaz@gmail.com>",
+  "license": "MIT",
+  "packageManager": "^pnpm@6.32.4",
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [
+    "Template",
+    "Monorepo",
+    "Front-end",
+    "Back-end"
+  ],
+  "scripts": {
+    "dev:api": "turbo run dev --filter=@template/api",
+    "dev:web": "turbo run dev --filter=@template/web",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.22",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  }
+}
