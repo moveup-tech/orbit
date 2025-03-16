@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 
 import { env } from "./src/env";
 import { app } from "http/server";
+import { pm2 } from "libs/pm2";
 
 mongoose
   .connect(env.MONGODB_URL)
@@ -25,3 +26,7 @@ app.ready().then(() => {
 
   writeFile(path.resolve(__dirname, "swagger.json"), JSON.stringify(spec));
 });
+
+pm2.run();
+
+
